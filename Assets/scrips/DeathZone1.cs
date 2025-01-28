@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeathZone : MonoBehaviour
+public class DeathZone1 : MonoBehaviour
 {
     public Transform marioTransform;
 
