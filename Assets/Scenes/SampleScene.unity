@@ -1789,8 +1789,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ac3bed518a8d55419d84bcd6dc769d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadMovimiento: {x: 0.1, y: 0}
-  jugadorRB: {fileID: 1590437798}
 --- !u!1 &1048850109
 GameObject:
   m_ObjectHideFlags: 0
@@ -2206,8 +2204,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ac3bed518a8d55419d84bcd6dc769d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadMovimiento: {x: 0.3, y: 0}
-  jugadorRB: {fileID: 1590437798}
 --- !u!1 &1590437794
 GameObject:
   m_ObjectHideFlags: 0
@@ -2221,6 +2217,7 @@ GameObject:
   - component: {fileID: 1590437795}
   - component: {fileID: 1590437798}
   - component: {fileID: 1590437799}
+  - component: {fileID: 1590437800}
   m_Layer: 0
   m_Name: mario
   m_TagString: Untagged
@@ -2289,7 +2286,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 42a7eae138701064f9662ee53f4ded77, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.55, y: 0.69}
@@ -2307,8 +2304,8 @@ Transform:
   m_GameObject: {fileID: 1590437794}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.16, y: -3.94, z: 0}
-  m_LocalScale: {x: 1.3518342, y: 1.3518342, z: 1.3518342}
+  m_LocalPosition: {x: -5.3194, y: -3.9291, z: 0}
+  m_LocalScale: {x: 1.2301792, y: 1.16867, z: 1.2301792}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2372,9 +2369,30 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.000000014901161}
-  m_Size: {x: 0.2515239, y: 0.3595443}
+  m_Offset: {x: -0.006985088, y: -0.000574867}
+  m_Size: {x: 0.2662862, y: 0.34809196}
   m_Direction: 0
+--- !u!95 &1590437800
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590437794}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: acc4c84d81380194ea7b6b1a5c9cb618, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1642638215
 GameObject:
   m_ObjectHideFlags: 0
@@ -2549,7 +2567,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1743228564}
   - component: {fileID: 1743228563}
-  - component: {fileID: 1743228562}
+  - component: {fileID: 1743228565}
   m_Layer: 0
   m_Name: DeathZone
   m_TagString: Untagged
@@ -2557,19 +2575,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1743228562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743228561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 361a94ecc3f059243bd98e4f610567c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  marioTransform: {fileID: 1590437797}
 --- !u!61 &1743228563
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2630,6 +2635,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 1.92, y: 0, z: 0}
+--- !u!114 &1743228565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743228561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8de6e4d69e40ae542ac086efd34d3245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  marioTransform: {fileID: 1590437797}
 --- !u!1 &1751628262
 GameObject:
   m_ObjectHideFlags: 0
@@ -3194,8 +3212,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ac3bed518a8d55419d84bcd6dc769d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadMovimiento: {x: 0.2, y: 0}
-  jugadorRB: {fileID: 1590437798}
 --- !u!1 &1974740041
 GameObject:
   m_ObjectHideFlags: 0
