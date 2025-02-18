@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    // Variables del juego
+    
     public int Score { get; private set; } // Puntuación del jugador
     public float TimeElapsed { get; private set; } // Tiempo transcurrido en el nivel
     public int Lives { get; private set; } // Vidas del jugador
@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
         // Inicializa las variables del juego
         Score = 0;
         TimeElapsed = 0f;
-        Lives = 3; // Puedes ajustar el número de vidas
+        Lives = 3; 
     }
 
     private void Update()
@@ -59,6 +59,6 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         Debug.Log("¡Game Over!");
-        // Aquí puedes cargar una escena de Game Over o reiniciar el nivel
+        
     }
 }
